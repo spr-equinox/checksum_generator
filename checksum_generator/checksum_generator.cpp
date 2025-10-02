@@ -1,4 +1,5 @@
 ﻿#define SPDLOG_WCHAR_TO_UTF8_SUPPORT
+#define SPDLOG_HEADER_ONLY
 
 #include <string>
 #include <filesystem>
