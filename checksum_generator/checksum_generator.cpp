@@ -52,9 +52,11 @@ std::string generate_file_hash(const path& f) {
     SHA256_Init(&sha256);
 
     std::ifstream o(f, std::ios::binary);
-    if (!o) return std::string();
+    if (!o) 
+        return std::string();
     char* buf = (char*)malloc(buf_size);
-    if (!buf) return o.close(), std::string();
+    if (!buf) 
+        return o.close(), std::string();
     while (o.good()) {
         o.read(buf, buf_size);
         std::streamsize read_size = o.gcount();
