@@ -1,5 +1,4 @@
 ﻿#define SPDLOG_WCHAR_TO_UTF8_SUPPORT
-#define SPDLOG_HEADER_ONLY
 
 #include <string>
 #include <filesystem>
@@ -9,7 +8,7 @@
 #include <future>
 #include <xutility>
 #include <Windows.h>
-#include <spdlog/spdlog.h>
+#include <spdlog/spdlog-inl.h>
 #include <BS_thread_pool.hpp>
 #include <openssl/sha.h>
 #include <atlbase.h>
