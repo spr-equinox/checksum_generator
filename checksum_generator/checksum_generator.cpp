@@ -132,6 +132,12 @@ int main(int argc, char* argv[])
 
     spdlog::info(L"选择文件夹：{}", folder);
 
+    if (folder.empty()) {
+        delete pool;
+        CoUninitialize();
+        return 1;
+    }
+
     path root(std::move(folder));
 
     std::list<path> folders;
